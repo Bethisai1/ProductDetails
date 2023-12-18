@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<title>Product Store</title>
+    		<link rel="stylesheet" href="productdetails.css">
+    		<link rel="icon" href="./p.jpg" type="image/x-icon">
+			<link rel="stylesheet" href="http://stackpath.bootstapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    		<script src="productdetails.js"></script>
+    		
+    		<style>
+				.hover-button {
+				 
+				  background-color:aqua;
+				  
+				 
+				  transition: background-color 0.3s ease;
+				  }
+				.hover-button:hover {
+				  background-color:skyblue;
+				}				
+			</style>
+    		
+</head>
+	<body bgcolor="pink">
+	
+	<div class="container mt-5 text-center">
+    	<h1 class="text-center font-italic mb-5 mt-5">Save Product</h1>
+
+    <form method="post"    action="./saveproductservlet" onsubmit="return productdet()" enctype="multipart/form-data">
+		<div class="form-group"><label class="font-italic font-weight-bold" for="productid">Product Id:</label>
+        <input type="number" class="form-control-sm" id="productid" name="productid" ></div>
+        <br>
+        
+       <div class="form-group"> 
+        <label class="font-italic font-weight-bold" for="productName">Product Name:</label>
+        <input type="text" class="form-control-sm" id="productName" name="productName" ></divclass="form-group">
+        <br> <br>
+           
+           <div class="form-group" >
+        <label class="font-italic font-weight-bold" for="productPrice">Product Price:</label>
+        <input type="number" class="form-control-sm" step="0.01" id="productPrice" name="productPrice" ></divclass="form-group">
+        <br> <br>
+        
+        <div class="form-group">
+         <label class="font-italic font-weight-bold" for="productmadein">Product Madein:</label>
+        <input type="text" class="form-control-sm" id="productmadein" name="productmadein"  /></div>
+        <br>
+        
+        <div class="form-group">
+        <label class="font-italic font-weight-bold" for="productCompany">Product Company:</label>
+        <input type="text" class="form-control-sm" id="productCompany" name="productCompany" ></div>
+        <br>
+        
+         <div class="form-group">
+        <label class="font-italic font-weight-bold" for="productmanufacturedate">Product Manufacture Date:</label>
+        <input type="date" class="form-control-sm" id="productmanufacturedate" name="productmanufacturedate" ></div>
+        <br>
+        
+        <div class="form-group">
+        <label class="font-italic font-weight-bold" for="productexpiredate">Product expire Date:</label>
+        <input type="date" class="form-control-sm" id="productexpiredate" name="productexpiredate" ></div>
+        <br>
+        
+        <div class="form-group">
+        <label class="font-italic font-weight-bold" for="productimage">Product image:</label>
+        <input type="file" class="form-control-sm" id="productimage" name="productimage" required ></div>
+        <br>
+        
+        
+        <button class="hover-button" type="submit" class="btn btn-success"> Add Product</button>
+    </form>
+    <button class="hover-button" onclick="window.location.href='Producthome.html'">BACK</button>
+</div>
+</body>
+</html>
